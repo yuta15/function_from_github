@@ -24,6 +24,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: check dir
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Contents of the directory:"
+          ls -la
 
       - name: Login to Azure
         uses: azure/login@v2
